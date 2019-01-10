@@ -14,6 +14,6 @@ public class ProdutoController {
 	public String novo(Produto produto) {
 		
 		
-		return "Ok";
+		return novo();
 	}
 }
