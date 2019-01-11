@@ -28,20 +28,27 @@ public class Produto implements Serializable {
 	@Column(name="precoProduto")
 	private Double preco;
 	
+	@Column(name="quantidade")
+	private Integer quantidade;
+	
 	public Produto() {
 		super();
 	}
 
-	public Produto(Integer idProduto, String nome, Double preco) {
+	public Produto(Integer idProduto, String nome, Double preco, Integer quantidade) {
 		super();
 		this.idProduto = idProduto;
 		this.nome = nome;
 		this.preco = preco;
+		this.quantidade = quantidade;
 	}
+
+	
 
 	@Override
 	public String toString() {
-		return "Produto [idProduto=" + idProduto + ", nome=" + nome + ", preco=" + preco + "]";
+		return "Produto [idProduto=" + idProduto + ", nome=" + nome + ", preco=" + preco + ", quantidade=" + quantidade
+				+ "]";
 	}
 
 	public Integer getIdProduto() {
@@ -67,7 +74,12 @@ public class Produto implements Serializable {
 	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
-	
-	
 
+	public Integer getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(Integer quantidade) {
+		this.quantidade = quantidade;
+	}
 }
